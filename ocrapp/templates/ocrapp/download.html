@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Result</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Container Styles */
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.75em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 25px;
+            background: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        a:hover {
+            background: #0056b3;
+        }
+
+        a:focus {
+            outline: 2px solid #0056b3;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>OCR Processing Complete</h1>
+        <p>Your OCR-processed PDF is available:</p>
+        <a href="{% url 'download_file' filename %}" download>Download the OCR PDF</a>
+    </div>
+</body>
+
+</html>
